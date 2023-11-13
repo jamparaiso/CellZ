@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class JoyStickController : MonoBehaviour
 {
     [SerializeField] Joystick joystick;
@@ -13,14 +14,19 @@ public class JoyStickController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        MovePlayer();
+    }//fixedupdate
+
+    private void MovePlayer()
+    {
         if (joystick.Direction.y != 0)
         {
-            rb.velocity = new Vector2(joystick.Direction.x * playerSpeed , joystick.Direction.y * playerSpeed);
+            rb.velocity = new Vector2(joystick.Direction.x * playerSpeed, joystick.Direction.y * playerSpeed);
         }
         else
         {
             rb.velocity = Vector2.zero;
         }
-    }
+    }//moveplayer
 
 }//class
