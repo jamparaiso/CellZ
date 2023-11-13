@@ -6,11 +6,20 @@ public class JoyStickController : MonoBehaviour
     [SerializeField] Joystick joystick;
     [SerializeField] float playerSpeed;
     private Rigidbody2D rb;
+    private float xPos;
+    private float yPos;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
+
+    private void Update()
+    {
+        xPos = joystick.Direction.x;
+        yPos = joystick.Direction.y;
+
+    }//update
 
     private void FixedUpdate()
     {
@@ -21,7 +30,7 @@ public class JoyStickController : MonoBehaviour
     {
         if (joystick.Direction.y != 0)
         {
-            rb.velocity = new Vector2(joystick.Direction.x * playerSpeed, joystick.Direction.y * playerSpeed);
+            rb.velocity = new Vector2(xPos * playerSpeed, yPos * playerSpeed);
         }
         else
         {
