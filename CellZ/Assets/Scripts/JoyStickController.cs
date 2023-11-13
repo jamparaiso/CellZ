@@ -5,9 +5,12 @@ public class JoyStickController : MonoBehaviour
 {
     [SerializeField] Joystick joystick;
     [SerializeField] float playerSpeed;
+
     private Rigidbody2D rb;
-    private float xPos;
-    private float yPos;
+
+    public float xPos { get; private set; }
+    public float yPos { get; private set; }
+ 
 
     private void Start()
     {
@@ -18,6 +21,8 @@ public class JoyStickController : MonoBehaviour
     {
         xPos = joystick.Direction.x;
         yPos = joystick.Direction.y;
+
+
 
     }//update
 
