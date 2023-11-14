@@ -10,6 +10,7 @@ public class MapController : MonoBehaviour
     
     public List<GameObject> terrainChunks;
     public LayerMask terrainMask;
+    public GameObject currentChunk;
 
     JoyStickController joyStickController;
     Vector3 noTerrainPosition;
@@ -26,6 +27,11 @@ public class MapController : MonoBehaviour
 
     private void ChunkChecker()
     {
+        if (!currentChunk)
+        {
+            return;
+        }
+
         float xPos = joyStickController.xPos;
         float yPos = joyStickController.yPos;
 

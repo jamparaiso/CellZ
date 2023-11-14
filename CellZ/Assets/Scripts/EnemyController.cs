@@ -1,14 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public Transform player;
+
+    [SerializeField] Transform player;
+    [SerializeField] float speed;
+
+    private void Start()
+    {
+        player = FindObjectOfType<JoyStickController>().transform;
+    }
 
     private void Update()
     {
-        this.gameObject.transform.position = player.position;
+        this.transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
     }
 
 }
