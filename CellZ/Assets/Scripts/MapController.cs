@@ -29,7 +29,7 @@ public class MapController : MonoBehaviour
     {
         if (!currentChunk)
         {
-            return;
+          return;
         }
 
         float xPos = joyStickController.xPos;
