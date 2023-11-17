@@ -22,8 +22,6 @@ public class JoyStickController : MonoBehaviour
         xPos = joystick.Direction.x;
         yPos = joystick.Direction.y;
 
-
-
     }//update
 
     private void FixedUpdate()
