@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EnemySpawner : MonoBehaviour
 {
     
     [Header("Spawner Settings")]
     [SerializeField] GameObject player;
-    [SerializeField] float distanceToSpawn = 30f;
+    [SerializeField] float spawnDistance = 30f;
     [SerializeField] float waveInterval = 1f;
+    [SerializeField] EnemyPool enemyPool;
+    public int maxPoolSize = 5;
+    public List<GameObject> enemyPrefabs;
 
     private int currentWave;
     private float spawnTimer; //used for spawn interval of enemies
@@ -19,21 +23,26 @@ public class EnemySpawner : MonoBehaviour
     private void Start()
     {
         TotalEnemyCount();
+
     }//Start
 
     private void Update()
     {
-        if (!IsTotalSpawnedLimit())
-        {
-            StartCoroutine(BeginNextWave());
-        }
-        else
-        {
+        //if (!IsTotalSpawnedLimit())
+        //{
+        //    StartCoroutine(BeginNextWave());
+        //}
+        //else
+        //{
             if (SpawnInterval())
             {
-                SpawnEnemy();
+        //        SpawnEnemy();
+                SpawnPooledEnemy();
             }
-        }
+        //}
+
+        //SpawnPooledEnemy();
+
     }//update
 
     IEnumerator BeginNextWave()
@@ -52,11 +61,10 @@ public class EnemySpawner : MonoBehaviour
     {
         //spawns the enemies based on their spawn interval value
         spawnTimer += Time.deltaTime;
-        float waveInterval = waves[currentWave].spawnInterval;
+        //float waveInterval = waves[currentWave].spawnInterval;
 
         if (spawnTimer > waveInterval)
         {
-            Debug.Log("Spawning enemies...");
             spawnTimer = 0f;
             return true;
         }
@@ -66,6 +74,19 @@ public class EnemySpawner : MonoBehaviour
         }
 
     }//SpawnTimer
+
+    private void SpawnPooledEnemy()
+    {
+        GameObject enemy = EnemyPool.instance.GetPooledObject();
+        
+        if (enemy != null)
+        {
+            enemy.transform.position = new Vector2(player.transform.position.x + Random.Range(-spawnDistance, spawnDistance),
+                                                   player.transform.position.y + Random.Range(-spawnDistance, spawnDistance));
+            enemy.SetActive(true);
+
+        }
+    }//SpawnPooledEnemy
 
     private void TotalEnemyCount()
     {
@@ -90,8 +111,8 @@ public class EnemySpawner : MonoBehaviour
             {
                 if(enemyGroup.totalSpawned < enemyGroup.toSpawn)
                 {
-                    Vector2 spawnPosition = new Vector2(player.transform.position.x + Random.Range(-distanceToSpawn, distanceToSpawn),
-                                                        player.transform.position.y + Random.Range(-distanceToSpawn, distanceToSpawn));
+                    Vector2 spawnPosition = new Vector2(player.transform.position.x + Random.Range(-spawnDistance, spawnDistance),
+                                                        player.transform.position.y + Random.Range(-spawnDistance, spawnDistance));
                     
                     Instantiate(enemyGroup.enemyPrefab, spawnPosition, Quaternion.identity);
 
@@ -101,6 +122,10 @@ public class EnemySpawner : MonoBehaviour
                 }
             }
         }
+
+
+        //spawn a random enemy from pooled enemy 
+
     }//SpawnEnemy
 
 
