@@ -3,8 +3,8 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
 
+    [SerializeField] EnemyScriptableObject enemyData;
     [SerializeField] Transform player;
-    [SerializeField] float speed;
 
     private void Start()
     {
@@ -13,7 +13,7 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
-        this.transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        this.transform.position = Vector2.MoveTowards(transform.position, player.position, enemyData.MoveSpeed * Time.deltaTime);
     }
 
 }

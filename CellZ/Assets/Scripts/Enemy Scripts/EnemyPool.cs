@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+//this class uses Unity's object pooling for memory usage optimisation
 public class EnemyPool : MonoBehaviour
 {
     public static EnemyPool instance;

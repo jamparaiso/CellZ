@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5622965515093081232}
   - component: {fileID: 8659206346545216786}
   m_Layer: 7
-  m_Name: Enemy 3
+  m_Name: Red
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.08962262, b: 0.87215054, a: 1}
+  m_Color: {r: 0.8490566, g: 0.13216448, b: 0.13216448, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -143,5 +143,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c212322b52174a8cbbf9fd28f9e753b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: e56635efac4f8094fae48e4e9fa00400, type: 2}
   player: {fileID: 0}
-  speed: 4
