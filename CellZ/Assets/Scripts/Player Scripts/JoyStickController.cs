@@ -4,7 +4,7 @@ using UnityEngine;
 public class JoyStickController : MonoBehaviour
 {
     [SerializeField] Joystick joystick;
-    [SerializeField] float playerSpeed;
+    private PlayerStats playerStats;
 
     private Rigidbody2D rb;
 
@@ -15,6 +15,7 @@ public class JoyStickController : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerStats = GetComponent<PlayerStats>();
     }
 
     private void Update()
@@ -33,7 +34,7 @@ public class JoyStickController : MonoBehaviour
     {
         if (joystick.Direction.y != 0)
         {
-            rb.velocity = new Vector2(xPos * playerSpeed, yPos * playerSpeed);
+            rb.velocity = new Vector2(xPos * playerStats.currentMoveSpeed, yPos * playerStats.currentMoveSpeed);
         }
         else
         {

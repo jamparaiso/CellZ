@@ -144,4 +144,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 5e396122e0772d9479d58b31baf32249, type: 2}
-  player: {fileID: 0}
+  testPrefab: {fileID: 2939412454100612275, guid: 72753d6eb1320bd40a1573049535e933, type: 3}
