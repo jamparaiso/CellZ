@@ -23,7 +23,6 @@ public class EnemyController : MonoBehaviour
     {
         float randomNumber = UnityEngine.Random.Range(0f, 100f);
 
-
         foreach (var rate in enemyData.drops)
         {
             if(randomNumber <= rate.DropRate)
@@ -32,14 +31,7 @@ public class EnemyController : MonoBehaviour
                 drop.transform.position = this.transform.position;
                 drop.SetActive(true);
             }
-            else
-            {
-                break;
-            }
         }
-
-        
-
     }
 
 }
