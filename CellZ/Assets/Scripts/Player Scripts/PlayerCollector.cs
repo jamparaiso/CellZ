@@ -12,5 +12,6 @@ public class PlayerCollector : MonoBehaviour
                 collectibles.Collect();
             }
         }
-    }
-}
+    }//OnTriggerEnter2D
+
+}//class

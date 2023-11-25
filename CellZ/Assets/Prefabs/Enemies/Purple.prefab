@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8602448471879829379}
   - component: {fileID: 5622965515093081232}
   - component: {fileID: 8659206346545216786}
+  - component: {fileID: 5365025533687909015}
   m_Layer: 7
   m_Name: Purple
   m_TagString: Enemy
@@ -115,7 +116,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -144,4 +145,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 44255c8f0bfb3c74d9765dad2b3971ee, type: 2}
-  testPrefab: {fileID: 3751186972177431744, guid: d4e3a669291129d4db3bb5f1fc9480ee, type: 3}
+--- !u!114 &5365025533687909015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8916824538275866303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71a059bf1c354014abe60566edcf1b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: 44255c8f0bfb3c74d9765dad2b3971ee, type: 2}

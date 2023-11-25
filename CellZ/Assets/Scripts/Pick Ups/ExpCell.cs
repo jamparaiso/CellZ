@@ -9,7 +9,8 @@ public class ExpCell : MonoBehaviour, ICollectibles
     void ICollectibles.Collect()
     {
         PlayerStats player = FindObjectOfType<PlayerStats>();
-        player.IncreaseExperince(experience);
+        player.IncreaseExperience(experience);
         this.gameObject.SetActive(false);
     }
-}
+
+}//class

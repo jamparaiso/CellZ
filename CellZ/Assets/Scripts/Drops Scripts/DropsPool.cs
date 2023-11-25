@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DropsPool : MonoBehaviour
 {
+    //this script is for creating initialising drops into a pool
+
     [Header("Initialise all the drops in here")]
     [SerializeField] List<GameObject> dropPrefabs;
     [SerializeField] int amountToPool = 20;
@@ -14,6 +16,6 @@ public class DropsPool : MonoBehaviour
         {
             PoolManager.instance.CreatePool(dropPrefabs[i],amountToPool);
         }
-    }
+    }//Start
 
 }//class

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     [SerializeField] PlayerScriptableObject playerData;
+    [SerializeField] bool forTesting;
 
     public float currentMoveSpeed { get; private set; }
     private float currentHealth;
@@ -14,6 +16,9 @@ public class PlayerStats : MonoBehaviour
     public int experience = 0;
     public int level = 1;
     public int experienceCap;
+
+    [SerializeField] float invincibilityDurationSecond = 1.5f;
+    private bool isInvincible = false;
 
     [System.Serializable]
     public class LevelRange 
@@ -34,16 +39,16 @@ public class PlayerStats : MonoBehaviour
         currentDamage = playerData.Damage;
 
         experienceCap = levelRanges[0].experienceCapIncrease; // initialise the first level cap
-    }
+    }//Start
 
-    public void IncreaseExperince(int exp)
+    public void IncreaseExperience(int exp)
     {
         experience += exp;
 
         CheckLevelUp();
-    }
+    }//IncreaseExperince
 
-    public void CheckLevelUp()
+    private void CheckLevelUp()
     {
         if (experience >= experienceCap)
         {
@@ -66,13 +71,63 @@ public class PlayerStats : MonoBehaviour
             }
             experienceCap += expCap;
         }
+    }//CheckLevelUp
+
+    public void TakeDamage(float damage)
+    {
+        if (isInvincible)
+        {
+            return;
+        }
+
+        currentHealth -= damage;
+
+        if(currentHealth <= 0)
+        {
+            KillPlayer();
+            //let the game knows the player is dead
+            return;
+        }
+
+        StartCoroutine(iFrame());
+    }//TakeDamage
+
+    private IEnumerator iFrame()
+    {
+        isInvincible = true;
+
+        yield return new WaitForSeconds(invincibilityDurationSecond);
+
+        isInvincible = false;
+
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void KillPlayer()
     {
-        if (collision.gameObject.tag == "Enemy") 
+        //implement game over here
+        Debug.Log("Played Dead");
+    }//KillPlayer
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (forTesting)
         {
-            collision.gameObject.SetActive(false);
+            if (collision.gameObject.tag == "Enemy")
+            {
+                collision.gameObject.SetActive(false);
+            }
         }
-    }
-}
+    }//OnCollisionEnter2D
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+
+    }//OnCollisionStay2D
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+
+    }//OnCollisionExit2D
+
+}//PlayerStats

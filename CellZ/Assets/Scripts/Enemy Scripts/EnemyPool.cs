@@ -4,6 +4,11 @@ using UnityEngine;
 //this class uses Unity's object pooling for memory usage optimisation
 public class EnemyPool : MonoBehaviour
 {
+
+    //use PoolManager for this-------------------------------------------
+    //-------------------------------------
+
+
     public static EnemyPool instance;
 
     [SerializeField] EnemySpawner enemySpawner;

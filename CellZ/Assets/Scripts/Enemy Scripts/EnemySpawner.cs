@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    
+ 
+    //update this to implepement PoolManager
+
     [Header("Spawner Settings")]
     [SerializeField] GameObject player;
     [SerializeField] float spawnDistance = 30f;

@@ -3,7 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerScriptableObject",menuName = "ScriptableObject/Player")]
 public class PlayerScriptableObject : ScriptableObject
 {
-    //stats for player
+
+    //base stats for player
     [SerializeField] float moveSpeed;
     public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
 
@@ -12,4 +13,6 @@ public class PlayerScriptableObject : ScriptableObject
 
     [SerializeField] float damage;
     public float Damage { get => damage; set => damage = value; }
+
 }
+

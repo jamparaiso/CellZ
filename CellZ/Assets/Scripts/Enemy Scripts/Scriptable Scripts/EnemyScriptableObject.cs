@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "EnemyScriptableObject",menuName ="ScriptableObject/Enemy")]
 public class EnemyScriptableObject : ScriptableObject
 {
-    //stats for enemies
+    //base stats of enemies
     [SerializeField] float moveSpeed;
     public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
 
@@ -23,9 +23,12 @@ public class EnemyScriptableObject : ScriptableObject
 
         [SerializeField] float dropRate;
         public float DropRate { get => dropRate; set => dropRate = value; }
-    }
+    }//DropList
 
     public List<DropList> drops;
 
+
     //add more stats or properties of enemy here
-}
+
+
+}//ScriptableObject

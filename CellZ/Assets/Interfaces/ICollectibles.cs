@@ -4,4 +4,6 @@
 public interface ICollectibles 
 {
     void Collect();
-}
+
+}//interface
+

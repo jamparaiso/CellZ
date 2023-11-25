@@ -14,14 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   maxHealth: 100
-  damage: 0
+  damage: 7
   drops:
-  - name: BlueCell
-    dropPrefab: {fileID: 3751186972177431744, guid: d4e3a669291129d4db3bb5f1fc9480ee, type: 3}
-    dropRate: 10
-  - name: PurpleCell
-    dropPrefab: {fileID: 2777661761330048167, guid: c5d7db3e10774ac4ba4174890f538f73, type: 3}
-    dropRate: 80
-  - name: YellowCell
-    dropPrefab: {fileID: 2939412454100612275, guid: 72753d6eb1320bd40a1573049535e933, type: 3}
-    dropRate: 10
+  - dropPrefab: {fileID: 3751186972177431744, guid: d4e3a669291129d4db3bb5f1fc9480ee, type: 3}
+    dropRate: 33
+  - dropPrefab: {fileID: 2777661761330048167, guid: c5d7db3e10774ac4ba4174890f538f73, type: 3}
+    dropRate: 33
+  - dropPrefab: {fileID: 2939412454100612275, guid: 72753d6eb1320bd40a1573049535e933, type: 3}
+    dropRate: 33
