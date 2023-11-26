@@ -1,14 +1,13 @@
 using UnityEngine;
 
-public class ExpCell : MonoBehaviour, ICollectibles
+public class HealthCell : MonoBehaviour, ICollectibles
 {
-    [SerializeField] int experience;
+    [SerializeField] float healAmount = 0.20f;
 
     void ICollectibles.Collect()
     {
         PlayerStats player = FindObjectOfType<PlayerStats>();
-        player.IncreaseExperience(experience);
+        player.RestoreHealth(healAmount);
         this.gameObject.SetActive(false);
     }
-
-}//class
+}//HealthCell

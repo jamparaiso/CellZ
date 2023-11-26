@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerCollector : MonoBehaviour
 {
+    //script for drops collections
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

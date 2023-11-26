@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
@@ -50,6 +49,7 @@ public class EnemyStats : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
         KillEnemy();
     }//OnCollisionEnter2D
 

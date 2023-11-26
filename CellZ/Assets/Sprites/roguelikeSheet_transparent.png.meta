@@ -627,7 +627,7 @@ TextureImporter:
         width: 13
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -635,6 +635,258 @@ TextureImporter:
       bones: []
       spriteID: 2ae90bfc9db11ca4987797b6200c9fe7
       internalID: 1376951604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeSheet_transparent_24
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 357
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca560381c3a62742ab6bd3809da21e3
+      internalID: -1012675606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeSheet_transparent_25
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 493
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6663ca004d3366f46a19ed4351cf8f17
+      internalID: -1187080687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeSheet_transparent_26
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 493
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2920e8cf963ff49489b2aebcb303991d
+      internalID: 2122575240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeSheet_transparent_27
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 493
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898226a492fe77e4bb95468009a287f8
+      internalID: -1215822402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeSheet_transparent_28
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 493
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae160900b02c12c4aac454fe0e33f386
+      internalID: 1313012371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeSheet_transparent_29
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 493
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801058c9c43ea07418defc069e65fd2c
+      internalID: -542088904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeSheet_transparent_30
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 510
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ce8b80fd0eec4479b08382d650fe91
+      internalID: -440474549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeSheet_transparent_31
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 510
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f42f3ab11a6d545a1770ec5f5f19bf
+      internalID: 1017171271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeSheet_transparent_32
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 510
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83864d2e48ca0284ea962ec630788448
+      internalID: 783337241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeSheet_transparent_33
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 510
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9fae7eaf3f51cf4ea274ce905c7c98e
+      internalID: -1899201633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeSheet_transparent_34
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 510
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5922f290faf626489b025e2ec109309
+      internalID: -1875127545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roguelikeSheet_transparent_35
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 494
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dbeb462502bbac4483e1a395c015f21
+      internalID: 601431294
       vertices: []
       indices: 
       edges: []
@@ -667,7 +919,19 @@ TextureImporter:
       roguelikeSheet_transparent_21: -1304213113
       roguelikeSheet_transparent_22: -459117045
       roguelikeSheet_transparent_23: 1376951604
+      roguelikeSheet_transparent_24: -1012675606
+      roguelikeSheet_transparent_25: -1187080687
+      roguelikeSheet_transparent_26: 2122575240
+      roguelikeSheet_transparent_27: -1215822402
+      roguelikeSheet_transparent_28: 1313012371
+      roguelikeSheet_transparent_29: -542088904
       roguelikeSheet_transparent_3: 1445579013
+      roguelikeSheet_transparent_30: -440474549
+      roguelikeSheet_transparent_31: 1017171271
+      roguelikeSheet_transparent_32: 783337241
+      roguelikeSheet_transparent_33: -1899201633
+      roguelikeSheet_transparent_34: -1875127545
+      roguelikeSheet_transparent_35: 601431294
       roguelikeSheet_transparent_4: 1805265217
       roguelikeSheet_transparent_5: -2026538672
       roguelikeSheet_transparent_6: 189863700

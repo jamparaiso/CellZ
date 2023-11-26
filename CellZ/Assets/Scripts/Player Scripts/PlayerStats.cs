@@ -92,6 +92,23 @@ public class PlayerStats : MonoBehaviour
         StartCoroutine(iFrame());
     }//TakeDamage
 
+    public void RestoreHealth(float heal)
+    {
+        if(currentHealth < playerData.MaxHealth)
+        {
+            currentHealth += (playerData.MaxHealth * heal); //heal based on percentage to max health
+            if (currentHealth > playerData.MaxHealth)
+            {
+                currentHealth = playerData.MaxHealth;
+            }
+        }
+    }//RestoreHealth
+
+    public void MakeInvincible(float duration)
+    {
+        //make the player invincible
+    }
+
     private IEnumerator iFrame()
     {
         isInvincible = true;
