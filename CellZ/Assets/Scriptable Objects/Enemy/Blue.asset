@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b72370f0c365804480542213220f9d3, type: 3}
   m_Name: Blue
   m_EditorClassIdentifier: 
-  moveSpeed: 4
+  moveSpeed: 2.5
   maxHealth: 100
   damage: 2
   drops:

@@ -7,6 +7,9 @@ TagManager:
   - Enemy
   - Drops
   - Destructibles
+  - Detector
+  - pProjectile
+  - eProjectile
   layers:
   - Default
   - TransparentFX

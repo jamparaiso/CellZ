@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5113859997746959314}
   - component: {fileID: 5155219588889184646}
   - component: {fileID: -8000243221128172661}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Yellow Cell
   m_TagString: Drops
   m_Icon: {fileID: 0}

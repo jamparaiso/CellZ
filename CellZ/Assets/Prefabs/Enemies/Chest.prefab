@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4354498632973017077}
   - component: {fileID: 7827034464303866449}
   - component: {fileID: 8645065469893455936}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chest
   m_TagString: Destructibles
   m_Icon: {fileID: 0}

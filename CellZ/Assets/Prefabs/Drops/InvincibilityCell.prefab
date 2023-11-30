@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1863016801197255558}
   - component: {fileID: 7646048861945548689}
   - component: {fileID: 2342175319865812422}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: InvincibilityCell
   m_TagString: Drops
   m_Icon: {fileID: 0}

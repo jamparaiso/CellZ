@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     [SerializeField] PlayerScriptableObject playerData;
-    [SerializeField] bool forTesting;
+    [SerializeField] bool forTestingKillEnemy;
 
     public float currentMoveSpeed { get; private set; }
     private float currentHealth;
@@ -127,8 +127,7 @@ public class PlayerStats : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
-        if (forTesting)
+        if (forTestingKillEnemy)
         {
             if (collision.gameObject.tag == "Enemy")
             {
