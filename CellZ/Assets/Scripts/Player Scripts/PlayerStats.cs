@@ -9,13 +9,13 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] bool forTestingKillEnemy;
 
     public float currentMoveSpeed { get; private set; }
-    private float currentHealth;
+    public float currentHealth {  get; private set; }
     private float currentDamage;
 
-    [Header("Experience/Level")]
-    public int experience = 0;
-    public int level = 1;
-    public int experienceCap;
+    //[Header("Experience/Level")]
+    public int experience {  get; private set; }
+    public int level {  get; private set; }
+    public int experienceCap {  get; private set; }
 
     [SerializeField] float invincibilityDurationSecond = 1.5f;
     private bool isInvincible = false;
@@ -34,12 +34,21 @@ public class PlayerStats : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        StartNewGame();
+    }//Start
+
+    public void StartNewGame()
+    {
         currentMoveSpeed = playerData.MoveSpeed;
         currentHealth = playerData.MaxHealth;
         currentDamage = playerData.Damage;
 
+        experience = 0;
+        level = 1;
+
         experienceCap = levelRanges[0].experienceCapIncrease; // initialise the first level cap
-    }//Start
+
+    }
 
     public void IncreaseExperience(int exp)
     {
